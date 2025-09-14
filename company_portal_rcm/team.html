@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guardian Angel HealthCare Solutions</title>
+  <link rel="stylesheet" href="Common.css" />
+<link rel="stylesheet" href="team.css">   <!-- page-specific -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  
+<!-- Header / Navigation -->
+<header>
+  <div class="nav-wrapper">
+    <ul class="nav-links">
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="solutions.html">Our Solutions</a></li>
+      <li><a href="team.html" class="active">Team Leadership</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <main>
+    <section id="team-leadership">
+  <h2 class="team-heading">Meet Our Leadership</h2>
+  <div class="team-grid">
+    <div class="leader-card">
+      <img src="images/alex.png" alt="Alex Richmond" class="leader-photo">
+      <h3>Silambarasan</h3>
+      <p class="leader-title">Developer</p>
+      <p class="leader-bio">Architect of scalable healthcare billing systems and backend automation.</p>
+    </div>
+    <div class="leader-card">
+      <img src="images/jeffrey.png" alt="Jeffrey Brown" class="leader-photo">
+      <h3>Jeffrey Brown</h3>
+      <p class="leader-title">Creative Leader</p>
+      <p class="leader-bio">Shapes visual identity and emotional resonance across all brand touchpoints.</p>
+    </div>
+    <div class="leader-card">
+      <img src="images/connor.png" alt="Connor Quinn" class="leader-photo">
+      <h3>Connor Quinn</h3>
+      <p class="leader-title">Designer</p>
+      <p class="leader-bio">Crafts intuitive UI/UX for healthcare platforms with precision and empathy.</p>
+    </div>
+    <div class="leader-card">
+      <img src="images/ann.png" alt="Ann Smith" class="leader-photo">
+      <h3>Ann Smith</h3>
+      <p class="leader-title">Manager</p>
+      <p class="leader-bio">Leads operations and ensures compliance across all RCM workflows.</p>
+    </div>
+  </div>
+</section>
+  </main>
+
+<section class="quote-carousel">
+  <div class="quote-card active">
+    <p class="quote-text">“Compliance isn’t paperwork — it’s trust.”</p>
+    <p class="quote-author">— Ann Smith, Compliance Lead</p>
+  </div>
+  <div class="quote-card">
+    <p class="quote-text">“Precision is compassion in billing.”</p>
+    <p class="quote-author">— Connor Quinn, Designer</p>
+  </div>
+  <div class="quote-card">
+    <p class="quote-text">“We don’t just manage revenue — we build reliability.”</p>
+    <p class="quote-author">— Jeffrey Brown, Creative Leader</p>
+  </div>
+  <div class="quote-card">
+    <p class="quote-text">“Every claim tells a story. We make sure it ends well.”</p>
+    <p class="quote-author">— Alex Richmond, Developer</p>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Guardian Angel HealthCare Solutions. All Rights Reserved.</p>
+  </footer>
+
+
+
+<script>
+  const cards = document.querySelectorAll('.quote-card');
+  let current = 0;
+
+  setInterval(() => {
+    cards[current].classList.remove('active');
+    current = (current + 1) % cards.length;
+    cards[current].classList.add('active');
+  }, 5000);
+</script>
+
+</body>
+
+</body>
+</html>
