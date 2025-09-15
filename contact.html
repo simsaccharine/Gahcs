@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Guardian Angel HealthCare Solutions</title>
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="contact.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<a href="https://wa.me/919944963683" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+
+  💬 Chat with Us
+</a>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f9fafc;
+      color: #1f2937;
+    }
+
+    header {
+      background-color: #002B5B;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      margin: 0;
+      background-color: #002B5B;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+   nav a.active {
+  color: white;
+  text-decoration: underline;
+  border-bottom: none;
+}
+
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      border-radius: 10px;
+    }
+
+    .contact-info, .contact-form {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+
+    .contact-info {
+      border-right: 1px solid #ccc;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #002B5B;
+      font-size: 1.8rem;
+    }
+
+    p {
+      margin: 10px 0;
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-info strong {
+      display: block;
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #000;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #1f2937;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid #2563eb;
+      border-color: #2563eb;
+    }
+
+    .contact-form button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #1e40af;
+    }
+
+    .map-embed {
+      margin-top: 30px;
+    }
+
+    .map-embed h3 {
+      font-size: 1.2rem;
+      color: #002B5B;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .contact-info {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .contact-info, .contact-form {
+        padding: 30px 20px;
+      }
+    }
+
+    footer {
+      background-color: #1a2e4f;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.8rem;
+    }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+}
+
+.newsletter-signup {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.newsletter-signup h3 {
+  font-size: 1.2rem;
+  color: #002B5B;
+  margin-bottom: 10px;
+}
+
+.newsletter-signup p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.newsletter-signup input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-signup button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-signup button:hover {
+  background-color: #1e40af;
+}
+
+#newsletter-success {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+  </style>
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+<header>
+  <div class="nav-wrapper">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="solutions.html">Our Solutions</a></li>
+      <li><a href="team.html">Team Leadership</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html"class="active">Contact Us</a></li>
+    </ul>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</header>
+
+  <!-- Contact Section -->
+  <div class="container">
+    <!-- Left Section: Contact Information -->
+    <div class="contact-info">
+      <h2>Questions? We're here to help</h2>
+      <p>Get in touch with an expert today.</p>
+
+      <strong>Phone:</strong>
+      <p>
+        +1 888 - 707 - 5786<br>
+        +91 996 - 295 - 9011<br>
+        +91 989 - 495 - 9011
+        
+      </p>
+
+      <strong>Email:</strong>
+      <p><a href="mailto:admin@gahcs.com">admin@gahcs.com</a></p>
+
+      <strong>Corporate Office:</strong>
+      <p>Santhi Enclave, Anna Nagar, Pammal,<br>Chennai - 600075</p>
+
+      <strong>Delivery Office:</strong>
+      <p>C1, 3rd Floor, Royal Apartments,<br>Nalakath Road, Pammal, Chennai - 600075</p>
+
+      <!-- Google Map Embed -->
+      <div class="map-embed">
+        <h3>📍 Find Us on Google Maps</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3887.9285083880286!2d80.1393562755424!3d12.976424364771592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sRoyal%20Apartments%2C%20Nalathambi%20Road%2C%20Pammal%2C%20Chennai%20-%20600075!5e0!3m2!1sen!2sus!4v1757811238322!5m2!1sen!2sus"
+          width="100%"
+          height="300"
+          style="border:0; border-radius: 10px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Right Section: Contact Form -->
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <p>If you have any questions, inquiries, or would like to know more about our services, please reach out to us. We are happy to assist you!</p>
+
+      <form action="#" method="post" role="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+        <button type="submit" aria-label="Send your message">Send Message</button>
+      </form>
+
+<div class="newsletter-signup">
+  <h3>📬 Stay Updated</h3>
+  <p>Subscribe to receive the latest updates, insights, and announcements from Guardian Angel HealthCare Solutions.</p>
+  <form id="newsletter-form">
+    <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p id="newsletter-success" style="display:none; color:green; margin-top:10px;">
+    ✅ Thanks for subscribing!
+  </p>
+</div>
+</div>
+    </div>
+  </div>
+
+<script>
+  document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent actual form submission
+    document.getElementById("newsletter-success").style.display = "block";
+    this.reset(); // Optional: clear the input field
+  });
+</script>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Guardian Angel HealthCare Solutions. All Rights Reserved.
+  </footer>
+</body>
+</html>

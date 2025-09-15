@@ -1,0 +1,51 @@
+/* Solutions page specific styles */
+
+#solutions {
+  background: url('images/solution1.png') no-repeat center left;
+  background-size: cover;
+ }
+
+#solutions .about-box {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px 0; /* Align left, don't center */
+  max-width: 700px;
+  width: 100%; /* Optional: Ensures responsiveness */
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+#solutions .about-box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #002B5B;
+  text-align: center;
+}
+
+#solutions .about-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#solutions .about-box ul {
+  list-style: disc inside;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Optional: Responsive tweak for mobile */
+@media (max-width: 768px) {
+  #solutions {
+    align-items: center; /* Center box on smaller screens */
+    padding: 20px;
+  }
+
+  #solutions .about-box {
+    margin: 20px 0;
+  }
+}

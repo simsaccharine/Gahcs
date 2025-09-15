@@ -1,0 +1,307 @@
+/* === Page Container === */
+#solutions-page {
+  background: url('images/solution1.png') no-repeat center left;
+  background-size: cover;
+  padding: 40px 20px;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  max-width: 1500px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* === Flow Section === */
+#solutions-flow {
+  background-color: #f3f6fb;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.solutions-heading {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1f2937;
+  text-shadow: 0 0 6px rgba(37,99,235,0.3);
+}
+
+.solutions-subtext {
+  font-size: 1.1rem;
+  color: #374151;
+  margin-bottom: 40px;
+}
+
+/* === Grid Layout === */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.flow-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 260px; /* Ensures all cards stay equal height */
+  overflow: hidden;
+}
+
+
+
+/* === Icon Styling === */
+/* === Icon Styling === */
+.flow-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1; /* ensures icon sits above glow */
+}
+
+.flow-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(199, 210, 254, 0.6), transparent);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* === Icon Classes === */
+.reg-icon         { background-image: url('images/registrationglow.png'); }
+.eligibility-icon { background-image: url('images/eligibilityglow.png'); }
+.coding-icon      { background-image: url('images/codingglow.png'); }
+.charge-icon      { background-image: url('images/chargeglow.png'); }
+.Edi-icon         { background-image: url('images/Ediglow.png'); }
+
+/* === Title Styling === */
+.flow-card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #1f2937;
+  cursor: pointer; 
+}
+
+/* === Description Reveal on Hover === */
+.flow-description {
+  opacity: 0;
+  max-height: 0;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.flow-card:hover {
+  box-shadow:
+    0 0 12px rgba(37, 99, 235, 0.4),   /* outer glow */
+    0 0 0 2px rgba(37, 99, 235, 0.2);  /* soft border ring */
+  transform: translateY(-4px);
+}
+
+.flow-card:hover .flow-description {
+  opacity: 1;
+  max-height: 300px;
+  margin-top: 10px;
+}
+.flow-card:hover .flow-icon::before {
+  opacity: 1;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 1024px) {
+  .flow-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .flow-container {
+    grid-template-columns: 1fr;
+  }
+
+.flow-description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0;
+  margin-top: 0;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    padding-top 0.3s ease,
+    margin-top 0.3s ease;
+}
+
+.flow-card:hover .flow-description {
+  max-height: 300px;
+  opacity: 1;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+}
+
+
+
+/* === KPI Section === */
+
+
+#kpi-highlights {
+  background-color: #eef2f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.kpi-heading {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 40px;
+  text-shadow: 0 0 6px rgba(37,99,235,0.2);
+}
+
+.kpi-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.kpi-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 12px rgba(37,99,235,0.3);
+}
+
+.kpi-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 10px;
+  animation: pulseGlow 2s infinite;
+}
+
+.kpi-value.static {
+  font-size: 2.5rem;
+  color: #10b981;
+  animation: none;
+}
+
+.kpi-label {
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* === Glow Animation === */
+@keyframes pulseGlow {
+  0% { text-shadow: 0 0 0px rgba(37,99,235,0.4); }
+  50% { text-shadow: 0 0 12px rgba(37,99,235,0.6); }
+  100% { text-shadow: 0 0 0px rgba(37,99,235,0.4); }
+}
+
+/* === Complainace Section === */
+
+#compliance-highlights {
+  background-color: #f9fafc;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.compliance-heading {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 40px;
+  text-shadow: 0 0 6px rgba(37,99,235,0.2);
+}
+
+.compliance-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.compliance-badge {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.compliance-badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 12px rgba(37,99,235,0.3);
+}
+
+.compliance-badge img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.compliance-badge span {
+  display: block;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+#payer-strip {
+  background-color: #f3f6fb;
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.payer-scroll {
+  overflow: hidden;
+  width: 100%;
+}
+
+.payer-track {
+  display: flex;
+  gap: 40px;
+  min-width: 200%;
+  animation: scrollLogos 30s linear infinite;
+}
+
+.payer-track img {
+  height: 40px;
+}
+
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
