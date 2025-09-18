@@ -6,13 +6,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guardian Angel HealthCare Solutions</title>
-  <link rel="stylesheet" href="common.css" />
- <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="Common.css" />
+ <link rel="stylesheet" href="Home.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
-
-
 
 
 <body>
@@ -36,40 +33,146 @@
 </header>
 
 <main>
-    <!-- Hero Section with Background Image -->
-    <section class="hero">
-        <div class="hero-overlay">
-            <h1>Guardian Angel HealthCare Solutions</h1>
 
-<br>
-            <h2>Streamline Your Revenue Cycle. Maximize Your Profitability.</h2>
-<br>
-            <p>We specialize in delivering end-to-end Revenue Cycle Management (RCM) solutions that help healthcare providers optimize efficiency, reduce denials, and maximize revenue.</p>
-<a href="contact.html" class="cta-btn">Get in Touch</a>
-        
-
-<section class="milestone-counters">
-  <h2 class="counter-heading">Our Journey So Far</h2>
-
-  <div class="milestone-box">
-    <span class="milestone-number">2+</span>
-    <p>Years of Trusted Care</p>
-  </div>
-  <div class="milestone-box">
-    <span class="milestone-number">1,200+</span>
-    <p>Patient Journeys Supported</p>
-  </div>
-  <div class="milestone-box">
-    <span class="milestone-number">15+</span>
-    <p>Partner Facilities Onboarded</p>
+<section class="top-carousel">
+  <div class="carousel-track">
+    <div class="carousel-slide">Empathy Drives Every Decision 🤍</div>
+    <div class="carousel-slide">Precision Powers Every Outcome ⚙️</div>
+    <div class="carousel-slide">Partnership Builds Every Future 🤝</div>
+    <div class="carousel-slide">Celebrating 2B+ in Annual AR Managed 💰</div>
   </div>
 </section>
-   
+
+    <!-- Hero Section with Background Image -->
+
+<section class="hero">
+  <div class="hero-overlay">
+    <h1 class="hero-heading">Guardian Angel HealthCare Solutions</h1>
+    <h2 class="hero-subheading">Streamline Your Revenue Cycle. Maximize Your Profitability.</h2>
+    <p class="hero-description">
+      We specialize in delivering end-to-end Revenue Cycle Management (RCM) solutions that help healthcare providers optimize efficiency, reduce denials, and maximize revenue.
+    </p>
+    <a href="contact.html" class="cta-btn">Get in Touch</a>
+  </div>
+</section>
+
+
+
+  <!-- Milestone Band -->
+
+
+<section class="milestone-journey">
+  <h2>Our Journey So Far</h2>
+  <p class="intro">Built on trust, scale, and care—every number tells a story of healing and growth.</p>
+
+  <div class="journey-steps">
+    <div class="step care">
+      <div class="icon">🩺</div>
+      <h3>2+ Years of Trusted Care</h3>
+      <p>Compassionate support since day one.</p>
+    </div>
+
+    <div class="step finance">
+      <div class="icon">💰</div>
+      <h3>2B+ Annual AR Managed</h3>
+      <p>Robust revenue cycle oversight.</p>
+    </div>
+
+    <div class="step providers">
+      <div class="icon">🏥</div>
+      <h3>100+ U.S. Providers Supported</h3>
+      <p>Nationwide collaboration and care delivery.</p>
+    </div>
+
+    <div class="step facilities">
+      <div class="icon">🤝</div>
+      <h3>15+ Partner Facilities Onboarded</h3>
+      <p>Trusted partnerships built on shared values.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider-gradient"></div>
+
+
+
+<!-- Growth Journey Section -->
+<section class="growth-journey">
+  <h2>Your Growth Journey Starts Here</h2>
+  <p class="intro">A partnership built on empathy, precision, and progress.</p>
+
+  <div class="journey-steps">
+    <div class="step care">
+      <div class="icon">🧠</div>
+      <h3>We Listen With Purpose</h3>
+      <p>We seek to understand your mission and challenges. Real healing starts with empathy.</p>
+    </div>
+    <div class="step finance">
+      <div class="icon">🛠️</div>
+      <h3>We Build With Precision</h3>
+      <p>We craft systems that reflect your values and drive outcomes. Every detail is intentional.</p>
+    </div>
+    <div class="step providers">
+      <div class="icon">📈</div>
+      <h3>We Grow Together</h3>
+      <p>We stay engaged post-implementation to help you evolve and thrive.</p>
+    </div>
+    <div class="step facilities">
+      <div class="icon">🤝</div>
+      <h3>We Champion Your Success</h3>
+      <p>We celebrate your wins and stand by you through every challenge.</p>
+    </div>
+  </div>
+
+  <a href="contact.html" class="cta-button">Let’s build something lasting</a>
+</section>
+
+  
 </main>
+
+
 
 <!-- Footer -->
   <footer>
     © 2025 Guardian Angel HealthCare Solutions. All Rights Reserved.
   </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.milestone-number');
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 100;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const milestoneSection = document.querySelector('.milestone-band');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          milestoneSection.classList.add('animate');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(milestoneSection);
+  });
+</script>
+
 </body>
 </html>

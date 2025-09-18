@@ -1,6 +1,7 @@
 .hero {
   background: url('images/hero-bg.jpg') no-repeat center center/cover;
-  min-height: 100vh;
+  height: auto;
+padding: 80px 8% 40px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -8,6 +9,7 @@
   text-align: left;
   color: white;
   position: relative;
+overflow: hidden;
   padding-left: 8%;
 }
 
@@ -17,7 +19,10 @@
   top: 0; left: 0;
   width: 100%; height: 100%;
   background: rgba(0,0,0,0.5);
+  z-index: 0;
+
 }
+
 
 .hero-overlay {
   position: relative;
@@ -25,9 +30,40 @@
   max-width: 700px;
 }
 
-.hero-overlay h1 { font-size: 3rem; margin-bottom: 10px; font-weight: bold; }
-.hero-overlay h2 { font-size: 1.2rem; margin-bottom: 10px; font-weight: bold; }
-.hero-overlay p  { font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; }
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+}gr
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
 
 @media (max-width: 768px) {
   .hero { justify-content: center; text-align: center; padding-left: 0; }
@@ -48,7 +84,13 @@
   margin-top: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: background-color 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.5s forwards;
 }
+.hero-overlay {
+  margin-bottom: 0; /* Prevent extra space below */
+}
+
 
 .cta-btn:hover {
   background-color: #1e40af;
@@ -185,68 +227,263 @@ header {
   color: #FFD700;
 }  
 
-
-.milestone-section {
-  padding: 60px 20px;
-  background-color: #f9fafc;
+.milestone-journey {
+  background: linear-gradient(to bottom, #ffffff, #f4f7fc);
+  padding: 80px 20px 60px;
   text-align: center;
-}
-
-.counter-heading {
-  text-align: center;
-  font-size: 1.8rem;
-  color: white;
-  margin-bottom: 40px;
-}
-
-
-.milestone-counters {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.milestone-box {
-  flex: 1;
-  max-width: 220px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  padding: 20px;
-  animation: fadeInUp 1s ease-out forwards;
-  opacity: 0;
-}
-
-.milestone-number {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #002B5B;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.milestone-box p {
-  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
   color: #333;
-  line-height: 1.4;
+  border-top: 4px solid #002B5B;
 }
 
-.milestone-heading-box {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  padding: 20px;
-  max-width: 300px;
-  margin: 0 auto 40px;
+.milestone-journey h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  color: #002B5B;
 }
 
-.counter-heading {
-  text-align: center;
-  font-size: 1.8rem;
-  color: white;
+.milestone-journey .intro {
+  font-size: 1.2em;
   margin-bottom: 40px;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.journey-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.step {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 30px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  transition: transform 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+/* Color Echo from Growth Journey */
+.step.care       { border-top-color: #4CAF50; }
+.step.finance    { border-top-color: #2196F3; }
+.step.providers  { border-top-color: #9C27B0; }
+.step.facilities { border-top-color: #FF9800; }
+
+.icon.care       { color: #4CAF50; }
+.icon.finance    { color: #2196F3; }
+.icon.providers  { color: #9C27B0; }
+.icon.facilities { color: #FF9800; }
+
+.step h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.step p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .journey-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .milestone-journey h2 {
+    font-size: 2em;
+  }
+
+  .milestone-journey .intro {
+    font-size: 1em;
+  }
+}
+
+
+/* Growth Journey Section */
+.growth-journey {
+  background: linear-gradient(to bottom, #f4f7fc, #ffffff);
+  padding: 80px 20px 60px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+}
+
+.growth-journey h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  color: #002B5B;
+}
+
+.growth-journey .intro {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.journey-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.step {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 30px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  transition: transform 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+/* Color Echo from Milestone */
+.step.care       { border-top-color: #4CAF50; }  /* Green */
+.step.finance    { border-top-color: #2196F3; }  /* Blue */
+.step.providers  { border-top-color: #9C27B0; }  /* Purple */
+.step.facilities { border-top-color: #FF9800; }  /* Orange */
+
+.icon.care       { color: #4CAF50; }
+.icon.finance    { color: #2196F3; }
+.icon.providers  { color: #9C27B0; }
+.icon.facilities { color: #FF9800; }
+
+.step h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.step p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 14px 28px;
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+  background-color: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .journey-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .growth-journey h2 {
+    font-size: 2em;
+  }
+
+  .growth-journey .intro {
+    font-size: 1em;
+  }
+}
+
+.divider-gradient {
+  height: 60px;
+  background: linear-gradient(to bottom, #003f7d, #f4f7fc);
+  margin-bottom: -1px;
+}
+
+@media (max-width: 768px) {
+  .divider-gradient {
+    height: 40px;
+  }
+}
+
+.top-carousel {
+  background: linear-gradient(to right, #ffffff, #f4f7fc);
+  color: #002B5B;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid #e0e6ed; /* subtle divider line */
+}
+.carousel-track {
+  display: flex;
+  animation: scrollCarousel 40s linear infinite;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0 20px;
+  white-space: nowrap;
+}
+
+@keyframes scrollCarousel {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  100% { transform: translateX(-400%); }
+}
+
 footer {
       background-color: #1a2e4f;
       color: white;
