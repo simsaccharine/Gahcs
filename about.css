@@ -1,8 +1,7 @@
 /* About Section Container */
 #about {
- background-color: #0a1f44; /* or your preferred deep blue */
- /* Deep navy background */
-  padding: 60px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f4f7fc);
+  padding: 80px 20px 60px;
 }
 
 /* Grid Layout for Cards */
@@ -15,44 +14,26 @@
 }
 
 /* Individual Card Styling */
+
 .card {
-  background: white;
-  padding: 30px;
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px;
+  transition: transform 0.3s ease;
+  border-top: 4px solid transparent;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
-/* Card Content */
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #1f2937;
-}
+/* Symbolic top border colors */
+.card.about-us { border-top-color: #4CAF50; }   /* Green for care */
+.card.vision   { border-top-color: #2196F3; }   /* Blue for clarity */
+.card.mission  { border-top-color: #FF9800; }   /* Orange for purpose */
 
-.card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #374151;
-}
-
-/* Icon + Text Alignment */
-.card-icon {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.card-text {
-  flex: 1;
-}
-
-/* Glowing Icons */
+/* Icon sizing and glow */
 .icon {
   width: 40px;
   height: 40px;
@@ -61,31 +42,80 @@
   background-repeat: no-repeat;
 }
 
-.about-icon {
-  background-image: url('images/aboutusglow.png');
-}
+.about-icon  { background-image: url('images/aboutusglow.png'); }
+.star-icon   { background-image: url('images/starglow.png'); }
+.target-icon { background-image: url('images/targetglow.png'); }
 
-.star-icon {
-  background-image: url('images/starglow.png');
-}
-
-.target-icon {
-  background-image: url('images/targetglow.png');
+.divider-gradient {
+  height: 60px;
+  background: linear-gradient(to bottom, #003f7d, #f4f7fc);
+  margin-bottom: -1px;
 }
 
 @media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr; /* Stack cards vertically */
-  }
-
-  .card-icon {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .icon {
-    margin-bottom: 10px;
+  .divider-gradient {
+    height: 40px;
   }
 }
 
+
+#why-choose-us {
+  background: linear-gradient(to bottom, #ffffff, #f4f7fc);
+  padding: 80px 20px 60px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+}
+
+.choose-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.choose-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 30px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  transition: transform 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.choose-card:hover {
+  transform: translateY(-5px);
+}
+
+.choose-card:nth-child(1) { border-top-color: #4CAF50; }  /* Green for trust */
+.choose-card:nth-child(2) { border-top-color: #2196F3; }  /* Blue for care */
+.choose-card:nth-child(3) { border-top-color: #FF9800; }  /* Orange for growth */
+
+.choose-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.trust-icon  { background-image: url('images/trustglow.png'); }
+.care-icon   { background-image: url('images/careglow.png'); }
+.growth-icon { background-image: url('images/growthglow.png'); }
+
+@media (max-width: 768px) {
+  .choose-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .choose-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}

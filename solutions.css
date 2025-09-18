@@ -305,3 +305,15 @@
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+.divider-gradient {
+  height: 60px;
+  background: linear-gradient(to bottom, #003f7d, #f4f7fc);
+  margin-bottom: -1px;
+}
+
+@media (max-width: 768px) {
+  .divider-gradient {
+    height: 40px;
+  }
+}
