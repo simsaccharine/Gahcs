@@ -39,7 +39,7 @@ header nav ul li a {
 .hero-icon {
   width: 300px;
   height: 300px;
-  background: url('images/Abouthero.png') no-repeat center center;
+  background: url('images/AboutHero.png') no-repeat center center;
   background-size: contain;
   flex-shrink: 0;
 }
