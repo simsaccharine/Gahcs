@@ -42,9 +42,9 @@
   background-repeat: no-repeat;
 }
 
-.about-icon  { background-image: url('images/aboutusglow.png'); }
-.star-icon   { background-image: url('images/starglow.png'); }
-.target-icon { background-image: url('images/targetglow.png'); }
+.about-icon  { background-image: url('images/Aboutusglow.png'); }
+.star-icon   { background-image: url('images/Starglow.png'); }
+.target-icon { background-image: url('images/Targetglow.png'); }
 
 .divider-gradient {
   height: 60px;
